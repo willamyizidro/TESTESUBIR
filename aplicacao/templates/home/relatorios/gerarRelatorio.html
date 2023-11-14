@@ -1,0 +1,25 @@
+{% extends 'home/inicial.html' %}
+
+{% block content %}
+    <header><h1>Gerar Relatorios</h1></header>
+    <form method="GET" class="meu-formulario" action="{% url 'generate_pdf' %}" >
+        {% csrf_token %}
+        <p class="label">Veiculo</p>
+        {{ form.veiculo}}
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <button type="submit" class="input-botao" id="generate-pdf">Enviar</button>    
+
+    </form>
+
+
+
+
+    {% endblock %}

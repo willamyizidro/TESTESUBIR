@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF Example</title>
+</head>
+<body>
+    <h1>Generate PDF Example</h1>
+
+    <button id="generate-pdf">Generate PDF</button>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#generate-pdf').on('click', function () {
+                // Abre o PDF em uma nova janela ou aba
+                window.open('/generate-pdf/', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
